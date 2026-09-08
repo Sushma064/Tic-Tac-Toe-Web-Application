@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1d0b50, #3d1c91, #1676c9);
+    color: white;
+}
+
+.game-container {
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    padding: 35px 25px;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 25px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.score-board {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 25px;
+}
+
+.score-board div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.score-board span {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.score-board strong {
+    font-size: 25px;
+}
+
+#status {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.board {
+    width: 330px;
+    height: 330px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.cell {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    font-size: 65px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #321276;
+    transition: 0.2s;
+}
+
+.cell:hover {
+    background: white;
+    transform: scale(1.03);
+}
+
+.cell.x {
+    color: #5724c9;
+}
+
+.cell.o {
+    color: #1684d4;
+}
+
+.cell.winner {
+    background: #4caf50;
+    color: white;
+}
+
+#resetButton {
+    margin-top: 30px;
+    padding: 13px 30px;
+    border: none;
+    border-radius: 25px;
+    background: #ffb300;
+    color: #222;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#resetButton:hover {
+    transform: translateY(-3px);
+    background: #ffc107;
+}
+
+@media (max-width: 450px) {
+
+    .game-container {
+        padding: 25px 15px;
+    }
+
+    h1 {
+        font-size: 38px;
+    }
+
+    .board {
+        width: 280px;
+        height: 280px;
+    }
+
+    .cell {
+        font-size: 50px;
+    }
+}
